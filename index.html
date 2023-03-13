@@ -7,25 +7,32 @@
     <title>Portfolio Tracker</title>
     <!-- connect to script.js -->
     <script src="script.js"></script>
+    <!-- connect css styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Portfolio chart -->
-    <div id="chart"></div>
-    
-    <!-- Form that accepts stock portfolio information, vertical  -->
+    <div class="container">
 
-    <form>
-        <label for="stock">Market:</label>
-        <input type="text" name="market" id="market">
-        <label for="shares">Purchase Amount</label>
-        <input type="text" name="shares" id="shares">
-        <label for="price">Purchase Price:</label>
-        <input type="text" name="price" id="price">
-        <input type="submit" value="Submit">
-    </form>
+        <section>
+            <!-- Portfolio chart -->
+            <div id="chart" class="chart"></div>
+                        
+            <!-- Form that accepts stock portfolio information make it vertical  -->
 
-    <!-- Table that shows all trading history of stocks and cryptocurrencies -->
+            <form class="form">
+                <label for="stock">Market:</label>
+                <input type="text" name="market" id="market">
+                <label for="shares">Purchase Amount</label>
+                <input type="text" name="shares" id="shares">
+                <label for="price">Purchase Price:</label>
+                <input type="text" name="price" id="price">
+                <input type="submit" value="Add Investment" class="button">
+            </form>
+        </section>
+        
+
+<!-- Table that shows all trading history of stocks and cryptocurrencies -->
     <table>
         <tr>
             <th>Date</th>
@@ -140,6 +147,10 @@
             <td>Interactive</td>
         </tr>
     </table>
+
+    </div>
+
+    
 
 
 </body>

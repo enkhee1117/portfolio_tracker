@@ -1,0 +1,46 @@
+body {
+    background-color: #000;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/* make all texts white */
+body, p, h1, h2, h3, h4, h5, h6, a, li, span, div, input, textarea, select, button {
+    color: #fff;
+}
+
+.chart {
+    width: 540px;
+    height: 247px;
+    background-color: bisque;
+}
+
+.button {
+    /* make button purple with round corners */
+    background-color: #4B5195;
+    border-radius: 5px;
+    width: 258px;
+    height: 46px;
+}
+
+/* make inputs vertically stacked using flex */
+.form {
+    display: flex;
+    flex-direction: column;
+    /* max width 350px */
+    max-width: 350px;
+    height: 391px;
+    /* make elements aligned center */
+    align-items: center;
+    padding-top: 24px;
+}
+
+.form input {
+    margin: 12px 0px 12px 0px;
+    width: 258px;
+    height: 61px    ;
+
+}
