@@ -2,20 +2,26 @@ body {
     background-color: #000;
 }
 
-.container {
-    width: 100%;
-    height: 100%;
-}
-
-/* make all texts white */
 body, p, h1, h2, h3, h4, h5, h6, a, li, span, div, input, textarea, select, button {
     color: #fff;
+}
+
+.container {
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.section_one {
+    display: flex;
+    flex-direction: column;
 }
 
 .chart {
     width: 540px;
     height: 247px;
     background-color: bisque;
+    display: flex;
 }
 
 .button {
@@ -41,6 +47,6 @@ body, p, h1, h2, h3, h4, h5, h6, a, li, span, div, input, textarea, select, butt
 .form input {
     margin: 12px 0px 12px 0px;
     width: 258px;
-    height: 61px    ;
-
+    height: 61px;
 }
+
