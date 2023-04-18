@@ -30,8 +30,17 @@
                 <input type="submit" value="Add Investment" class="button">
             </form>
         </section>
-        
 
+        <!-- Login section -->
+        <section>
+            <div id="authForm" class="authentication">
+                <h2>Authentication</h2>
+                <input type="email" placeholder="email" id="userEmail">
+                <input type="password" placeholder="password" id="userPassword">
+                <button id="signUpButton" class="button">Sign Up</button>
+                <button id="signInButton" class="button">Sign In</button>
+            </div>        
+        </section>
 <!-- Table that shows all trading history of stocks and cryptocurrencies -->
     <table>
         <tr>
@@ -151,7 +160,11 @@
     </div>
 
     
-
+    <script type="module">
+        const userEmail = document.querySelector('#userEmail');
+        const userPassword = document.querySelector('#userPassword');
+        
+    </script>
 
 </body>
 </html>
