@@ -2,8 +2,12 @@ body {
     background-color: #000;
 }
 
-body, p, h1, h2, h3, h4, h5, h6, a, li, span, div, input, textarea, select, button {
-    color: #fff;
+body, p, h1, h2, h3, h4, h5, h6, a, li, span, div, textarea, select, button {
+    color: green;
+}
+
+input {
+    color: black;
 }
 
 .container {

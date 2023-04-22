@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/enkhee1117/portfolio_tracker/issues"
   },
-  "homepage": "https://github.com/enkhee1117/portfolio_tracker#readme"
+  "homepage": "https://github.com/enkhee1117/portfolio_tracker#readme",
+  "dependencies": {
+    "firebase": "^9.19.1"
+  }
 }
