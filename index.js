@@ -43,9 +43,8 @@ export function signOutUser() {
   return signOut(auth);
 }
 
-// Export auth and app instances
-export { auth, app, onAuthStateChanged };
-
-
 // ------------ Firestore ------------ //
 const db = getFirestore(app);
+
+// Export auth and app instances
+export { auth, app, onAuthStateChanged, db, collection, getDocs };

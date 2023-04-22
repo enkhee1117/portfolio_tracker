@@ -6,13 +6,16 @@ const userEmail = document.querySelector('#userEmail');
 const userPassword = document.querySelector('#userPassword');
 
 // Hide Authentication if user is signed in
-onAuthStateChanged(auth, (user) => {
-    if (user) {
+onAuthStateChanged(auth, (currentUser) => {
+    if (currentUser) {
         console.log("User is signed in");
+        console.log(currentUser);
+        user = currentUser;
         document.querySelector("#loginSection").style.display = "none";
         document.querySelector("#logoutSection").style.display = "block";
     } else {
         console.log("User is signed out");
+        user = null;
         document.querySelector("#loginSection").style.display = "block";
         document.querySelector("#logoutSection").style.display = "none";
     }
@@ -50,4 +53,3 @@ document.querySelector("#signOutButton").addEventListener('click', async () => {
     user = null;
     console.log("User signed out");
 })
-
