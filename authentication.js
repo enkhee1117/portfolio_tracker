@@ -4,6 +4,8 @@ let user = null;
 
 const userEmail = document.querySelector('#userEmail');
 const userPassword = document.querySelector('#userPassword');
+const authElements = document.querySelectorAll(".auth-element");
+const signOutButton = document.querySelector("#signOutButton");
 
 // Hide Authentication if user is signed in
 onAuthStateChanged(auth, (currentUser) => {
@@ -11,13 +13,17 @@ onAuthStateChanged(auth, (currentUser) => {
         console.log("User is signed in");
         console.log(currentUser);
         user = currentUser;
-        document.querySelector("#loginSection").style.display = "none";
-        document.querySelector("#logoutSection").style.display = "block";
+        authElements.forEach(element => {
+            element.style.display = "none";
+        });
+        signOutButton.style.display = "inline";
     } else {
         console.log("User is signed out");
         user = null;
-        document.querySelector("#loginSection").style.display = "block";
-        document.querySelector("#logoutSection").style.display = "none";
+        signOutButton.style.display = "none";
+        authElements.forEach(element => {
+            element.style.display = "inline";
+        });
     }
 });
 

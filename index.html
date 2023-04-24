@@ -5,22 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Tracker</title>
-    <!-- connect to script.js -->
-    <script src="script.js"></script>
     <!-- connect css styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
+        <!-- Navigation -->
+        <nav class="nav-container">
+            <input type="email" placeholder="email" id="userEmail"  class="auth-element">
+            <input type="password" placeholder="password" id="userPassword" class="auth-element" >
+            <button id="signUpButton" class="button auth-element">Sign Up</button>
+            <button id="signInButton" class="button auth-element">Sign In</button>
+            <button id="signOutButton" class="button" style="display: none;">Sign Out</button>
+        </nav>
 
-        <section class="section_one">
-            <!-- Portfolio chart -->
-            <!-- <div id="chart" class="chart"></div> -->
-                        
-            <!-- Form that accepts stock portfolio information make it vertical  -->
+        <canvas id="investmentChart"></canvas>
 
-            <form id="investmentForm">
+        <section class="form-container">
+
+            <form id="investmentForm" class="form">
                 <label for="market">Investment Market:</label>
                 <input type="text" id="market" name="market" required><br>
         
@@ -50,154 +54,41 @@
                 <label for="pricePaid">Price Paid:</label>
                 <input type="number" id="pricePaid" name="pricePaid" required><br>
         
-                <button type="submit">Submit</button>
+                <button type="submit" class="button">Submit</button>
             </form>
 
         </section>
 
-        <!-- Login section -->
-        <section id="loginSection">
-            <div id="authForm" class="authentication">
-                <h2>Authentication</h2>
-                <input type="email" placeholder="email" id="userEmail">
-                <input type="password" placeholder="password" id="userPassword">
-                <button id="signUpButton" class="button">Sign Up</button>
-                <button id="signInButton" class="button">Sign In</button>
-            </div>        
-        </section>
-
-        
-
-        <!-- Logout section -->
-        <section id="logoutSection" class="authentication">
-            <button id="signOutButton" class="button">Sign Out</button>
-        </section>
-
-        <!-- Test section -->
         <section>
-            <button id="whoLogged" class="button"> WHO IS LOGGGED ID? </button>
+            <!-- Table that shows all trading history of stocks and cryptocurrencies -->
+            <table id="TransactionsTable">
+                <thead>
+                    <tr>
+                    <th>Market</th>
+                    <th>Transaction Type</th>
+                    <th>Investment Type</th>
+                    <th>Transaction Amount</th>
+                    <th>Transaction Fee</th>
+                    <th>Platform</th>
+                    <th>Price Paid</th>
+                    <th>Transaction Date</th>
+                    <th>Total Investment Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionTableBody">
+                    
+                </tbody>
+            </table>
         </section>
-<!-- Table that shows all trading history of stocks and cryptocurrencies -->
-    <table>
-        <tr>
-            <th>Date</th>
-            <th>Market</th>
-            <th>Investment Type</th>
-            <th>Amount</th>
-            <th>Purchase Price</th>
-            <th>Current Price</th>
-            <th>Price out</th>
-            <th>Total Investment</th>
-            <th>Current Exposure</th>
-            <th>Realized Profit and Loss</th>
-            <th>Unrealized Profit and Loss</th>
-            <th>Platform</th>
-        </tr>
-        <tr>
-            <td>01/01/2023</td>
-            <td>AAPL</td>
-            <td>Stock</td>
-            <td>100</td>
-            <td>500</td>
-            <td>450</td>
-            <td></td>
-            <td>50000</td>
-            <td>45000</td>
-            <td>0</td>
-            <td>-50000</td>
-            <td>Interactive</td>
-        </tr>
-        <tr>
-            <td>01/01/2023</td>
-            <td>AAPL</td>
-            <td>Stock</td>
-            <td>100</td>
-            <td>500</td>
-            <td>450</td>
-            <td></td>
-            <td>50000</td>
-            <td>45000</td>
-            <td>0</td>
-            <td>-50000</td>
-            <td>Interactive</td>
-        </tr>
-        <tr>
-            <td>01/01/2023</td>
-            <td>AAPL</td>
-            <td>Stock</td>
-            <td>100</td>
-            <td>500</td>
-            <td>450</td>
-            <td></td>
-            <td>50000</td>
-            <td>45000</td>
-            <td>0</td>
-            <td>-50000</td>
-            <td>Interactive</td>
-        </tr>
-        <tr>
-            <td>01/01/2023</td>
-            <td>AAPL</td>
-            <td>Stock</td>
-            <td>100</td>
-            <td>500</td>
-            <td>450</td>
-            <td></td>
-            <td>50000</td>
-            <td>45000</td>
-            <td>0</td>
-            <td>-50000</td>
-            <td>Interactive</td>
-        </tr>
-        <tr>
-            <td>01/01/2023</td>
-            <td>AAPL</td>
-            <td>Stock</td>
-            <td>100</td>
-            <td>500</td>
-            <td>450</td>
-            <td></td>
-            <td>50000</td>
-            <td>45000</td>
-            <td>0</td>
-            <td>-50000</td>
-            <td>Interactive</td>
-        </tr>
-        <tr>
-            <td>01/01/2023</td>
-            <td>AAPL</td>
-            <td>Stock</td>
-            <td>100</td>
-            <td>500</td>
-            <td>450</td>
-            <td></td>
-            <td>50000</td>
-            <td>45000</td>
-            <td>0</td>
-            <td>-50000</td>
-            <td>Interactive</td>
-        </tr>
-        <tr>
-            <td>01/01/2023</td>
-            <td>AAPL</td>
-            <td>Stock</td>
-            <td>100</td>
-            <td>500</td>
-            <td>450</td>
-            <td></td>
-            <td>50000</td>
-            <td>45000</td>
-            <td>0</td>
-            <td>-50000</td>
-            <td>Interactive</td>
-        </tr>
-    </table>
+
 
     </div>
-
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@2.27.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script> -->
     <script type="module" src="index.js"></script>
     <script type="module" src="authentication.js"></script>
     <script type="module" src="db.js"></script>
-
+    
 </body>
 </html>

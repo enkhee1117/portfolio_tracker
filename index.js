@@ -1,6 +1,6 @@
 // Update the below URL with the appropriate version if necessary.
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { getFirestore, collection, addDoc, getDocs } from 'firebase/firestore';
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -8,7 +8,6 @@ import {
   onAuthStateChanged,
   signOut,
 } from 'firebase/auth';
-import { getAnalytics } from 'firebase/analytics';
 
 // INSERT YOUR FIREBASE CONFIG OBJECT HERE
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -43,8 +42,7 @@ export function signOutUser() {
   return signOut(auth);
 }
 
-// ------------ Firestore ------------ //
-const db = getFirestore(app);
+
 
 // Export auth and app instances
-export { auth, app, onAuthStateChanged, db, collection, getDocs };
+export { auth, app, onAuthStateChanged};
